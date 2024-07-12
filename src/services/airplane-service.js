@@ -66,7 +66,7 @@ async function destroyAirplane(id){
 async function updateAirplane(id,data){
     try {
         const updatedAirplane=await airplaneRepository.update(id,data);
-        console.log(updatedAirplane);
+        // console.log(updatedAirplane);
         return updatedAirplane;
         
     } catch (error) {

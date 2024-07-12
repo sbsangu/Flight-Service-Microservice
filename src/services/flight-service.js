@@ -52,7 +52,7 @@ async function getAllFlights(query) {
 
   if (query.travellers) {
     customFilter.totalSeats = {
-      [Op.gte]: query.trips,
+      [Op.gte]: query.travellers,
     };
   }
 
@@ -72,7 +72,7 @@ async function getAllFlights(query) {
   }
 
   try {
-    const flights = await flightRepository.getAllFlights(customFilter,sortFilters);
+    const flights = await flightRepository.getAllFlights(customFilter,sortFilter);
     
     return flights;
   } catch (error) {
